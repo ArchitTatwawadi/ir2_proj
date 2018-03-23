@@ -14,7 +14,7 @@ LEU = 9 # range -133 to 86
 HD  = 10 # range -39 to 36
 
 speed = 100
-sleep_time = 0.5
+sleep_time = 5
 global serial_connection 
 
 def open_port():
@@ -45,7 +45,7 @@ def initall():
     global serial_connection 
     for dynamixel_id in range(1, 11) :
         serial_connection.goto(dynamixel_id, 0, speed, degrees=True)
-        time.sleep(sleep_time)    # Wait 1 second
+        time.sleep(1)    # Wait 1 second
 
 def nk(deg):
     send_pos(1,deg)
@@ -108,7 +108,6 @@ def get_leu():
 
 def get_hd():
     return get_pos(10)
-
 
 ###############################################################33
 
