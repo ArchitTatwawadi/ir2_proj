@@ -2,7 +2,7 @@ from pyax12.connection import Connection
 import time
 
 # Connect to the serial port
-serial_connection = Connection(port="COM5", baudrate=1000000)
+serial_connection = Connection(port="/dev/ttyUSB0", baudrate=1000000)
 
 dynamixel_id = 1
 

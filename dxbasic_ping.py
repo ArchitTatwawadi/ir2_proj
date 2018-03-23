@@ -1,7 +1,7 @@
 ﻿from pyax12.connection import Connection
 
 # Connect to the serial port
-serial_connection = Connection(port="COM5", baudrate=1000000)
+serial_connection = Connection(port="/dev/ttyUSB0", baudrate=1000000)
 
 for dynamixel_id in range(1, 11) :
 
