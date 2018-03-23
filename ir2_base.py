@@ -37,6 +37,10 @@ def send_pos(mid, deg):
     serial_connection.goto(mid, deg, speed, degrees=True)
     time.sleep(sleep_time)    #` Wait 1 second
 
+def get_pos(mid):
+    global serial_connection 
+    return serial_connection.get_present_position(mid,True) 
+
 def initall():
     global serial_connection 
     for dynamixel_id in range(1, 11) :
@@ -75,35 +79,35 @@ def hd(deg):
     send_pos(10,deg)
 
 def get_nk(deg):
-    get_pos(1,deg)
+    return get_pos(1)
         
-def get_rsu(deg):
-    get_pos(2,deg)    
+def get_rsu():
+    return get_pos(2)    
 
-def get_rss(deg):
-    get_pos(3,deg)    
+def get_rss():
+    return get_pos(3)    
 
-def get_rer(deg):
-    get_pos(4,deg)    
+def get_rer():
+    return get_pos(4)    
 
-def get_reu(deg):
-    get_pos(5,deg)    
+def get_reu():
+    return get_pos(5)    
 
-def get_lsu(deg):
-    get_pos(6,deg)    
+def get_lsu():
+    return get_pos(6)    
 
-def get_lss(deg):
-    get_pos(7,deg)    
+def get_lss():
+    return get_pos(7)    
 
-def get_ler(deg):
-    get_pos(8,deg)    
+def get_ler():
+    return get_pos(8)    
 
-def get_leu(deg):
-    get_pos(9,deg)
+def get_leu():
+    return get_pos(9)
 
 
-def get_hd(deg):
-    get_pos(10,deg)
+def get_hd():
+    return get_pos(10)
 
 
 ###############################################################33
