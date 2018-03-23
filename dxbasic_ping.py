@@ -19,7 +19,7 @@ for dynamixel_id in range(1, 11) :
 	# Ping the third dynamixel unit
 	is_available = serial_connection.ping(dynamixel_id)
 
-	print(is_available)
+	print(dynamixel_id,is_available)
 
 # Close the serial connection
 serial_connection.close()
