@@ -4,7 +4,8 @@ Created on Fri Mar 23 12:32:53 2018
 
 @author: cvssa
 """
-
+import sys
+sys.path.insert(0, '/home/pi/ir2_proj/motion/')
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 import ir2_base as ir
@@ -45,18 +46,18 @@ def on_message(client, userdata, message):
     print("Received a new message: ")
     str = message.payload.decode("utf-8")
     print(str)
-    if str == "Sandeep"
-	mo.sandeep_motion()
-    elif str == "Archit"
-	mo.Archit_motion()
-    elif str == "Mohak"
-	mo.Mohak_motion()
-    elif str == "Shashwat"
-	mo.shashwat_motion()
-    elif str == "Surya"
-	mo.surya_motion()
-    elif str == "Unkown"
-	mo.unknown_motion()
+    if str == "Sandeep":
+        mo.sandeep_motion()
+    elif str == "Archit":
+        mo.Archit_motion()
+    elif str == "Mohak":
+        mo.Mohak_motion()
+    elif str == "Shashwat":
+        mo.shashwat_motion()
+    elif str == "Surya":
+        mo.surya_motion()
+    elif str == "Unkown":
+        mo.unknown_motion()
         
     print("--------------\n\n")
 
