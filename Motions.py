@@ -6,8 +6,11 @@ def Archit_motion():
   #move neck from 90 to 135
   ir.nk(100)
   ir.nk(135)
+  ir.rsu(120)
+  ir.reu(90)
+  ir.lsu(80)
+  ir.lss(120)
   ir.leu(135)
-  ir.reu(45)
 
   for x in range(0, 3):  
     ir.hd(40)
@@ -29,7 +32,7 @@ def Mohak_motion():
     ir.rss(90) #outward
     ir.lss(90)
     
-  ir.initall()
+  #ir.initall()
     
 def shashwath_motion():
   ir.initall()
@@ -49,7 +52,7 @@ def shashwath_motion():
     ir.reu(45) #outward
     
     ir.reu(90)
-  ir.initall()
+  #ir.initall()
     
 def sandeeep_motion():
   ir.initall()
@@ -60,7 +63,7 @@ def sandeeep_motion():
   time.sleep(1)
   ir.reu(90)
   ir.rsu(135) #down
-  ir.initall()
+  #ir.initall()
   
   
 def surya_motion():
@@ -76,7 +79,7 @@ def surya_motion():
     ir.reu(90)
     ir.leu(90)
     ir.hd(90) 
-  ir.initall()
+  #ir.initall()
     
 
 def unknown_person_motion():
@@ -91,7 +94,7 @@ def unknown_person_motion():
   for x in range(0,3):
     ir.nk(135)
     ir.nk(45)
-  ir.initall()
+  #ir.initall()
 
   
   
