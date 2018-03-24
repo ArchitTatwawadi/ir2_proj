@@ -1,4 +1,6 @@
 from pyax12.connection import Connection
+from scipy.interpolate import interp1d
+
 import time
 
 NK  = 1 # range -60 to 50
@@ -8,6 +10,7 @@ RSU = 2 # range -53 to 115
 rsu_val = interp1d([0,180],[-53,115])
 
 RSS = 3 # range -87 to 51
+
 rss_val = interp1d([0,180],[-87,51])
 
 RER = 4 # range -114 to 100
