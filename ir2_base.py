@@ -32,10 +32,10 @@ LEU = 9 # range -133 to 86
 leu_val = interp1d([0,180],[-133,86])
 
 HD  = 10 # range -39 to 36
-hd = interp1d([0,180],[-39,36])
+hd_val = interp1d([0,180],[-39,36])
 
 speed = 100
-sleep_time = 5
+sleep_time = 1
 global serial_connection 
 
 def open_port():
@@ -48,9 +48,11 @@ def close_port():
     serial_connection.close()
     
 def set_speed(val):
+    global speed    
     speed = val
 
 def set_sleep(val):
+        global sleep_time
         sleep_time = val
 
 def send_pos(mid, deg):
@@ -66,37 +68,37 @@ def initall():
     global serial_connection 
     for dynamixel_id in range(1, 11) :
         serial_connection.goto(dynamixel_id, 0, speed, degrees=True)
-        time.sleep(1)    # Wait 1 second
+        time.sleep(sleep_time)    # Wait 1 second
 
 def nk(deg):
     send_pos(1,nk_val(deg))
         
 def rsu(deg):
-    send_pos(2,rsu(deg))    
+    send_pos(2,rsu_val(deg))    
 
 def rss(deg):
-    send_pos(3,rss(deg))    
+    send_pos(3,rss_val(deg))    
 
 def rer(deg):
-    send_pos(4,rer(deg))    
+    send_pos(4,rer_val(deg))    
 
 def reu(deg):
-    send_pos(5,reu(deg))    
+    send_pos(5,reu_val(deg))    
 
 def lsu(deg):
-    send_pos(6,lsu(deg))    
+    send_pos(6,lsu_val(deg))    
 
 def lss(deg):
-    send_pos(7,lss(deg))    
+    send_pos(7,lss_val(deg))    
 
 def ler(deg):
-    send_pos(8,ler(deg))    
+    send_pos(8,ler_val(deg))    
 
 def leu(deg):
-    send_pos(9,leu(deg))
+    send_pos(9,leu_val(deg))
 
 def hd(deg):
-    send_pos(10,hd(deg))
+    send_pos(10,hd_val(deg))
 
 def get_nk(deg):
     return get_pos(1)

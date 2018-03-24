@@ -1,89 +1,97 @@
+import ir2_base as ir
+import time
 
-def Archit_motion()
-  initall()
+def Archit_motion():
+  ir.initall()
   #move neck from 90 to 135
-  nk(100)
-  nk(135)
-  leu(135)
-  reu(45)
-  
+  ir.nk(100)
+  ir.nk(135)
+  ir.leu(135)
+  ir.reu(45)
+
   for x in range(0, 3):  
-    hd("up")
-    sleep(for few ms)
-    hd("down")
+    ir.hd(40)
+    #time.sleep(1)
+    ir.hd(150)
     
+  ir.initall()
     
-def Mohak_motion()
-  initall()
+def Mohak_motion():
+  ir.initall()
   
-  rsu(45) #up
-  lsu(135) #up
+  ir.rsu(45) #up
+  ir.lsu(135) #up
   
   for x in range(0, 3):
-    rss(75) #inward
-    lss(115)
-    sleep(for few ms)
-    rss(90) #outward
-    lss(90)
+    ir.rss(75) #inward
+    ir.lss(115)
+    time.sleep(0.5)
+    ir.rss(90) #outward
+    ir.lss(90)
     
+  ir.initall()
     
-def shashwath_motion()
-  initall()
+def shashwath_motion():
+  ir.initall()
   
-  for x in range(0:3)
-    rsu(135) #down
-    lsu(125) #up
-    leu(45) #inward
-    sleep(for very few ms)
-    leu(135) #outward
+  for x in range(0,3):
+    ir.rsu(135) #down
+    ir.lsu(125) #up
+    ir.leu(45) #inward
+    time.sleep(0.5)
+    ir.leu(135) #outward
     
-    leu(90) #reset
-    lsu(45) #down
-    rsu(65) #up
-    reu(125) #inward
-    sleep(for very few ms)
-    reu(45) #outward
+    ir.leu(90) #reset
+    ir.lsu(45) #down
+    ir.rsu(65) #up
+    ir.reu(125) #inward
+    time.sleep(0.5)
+    ir.reu(45) #outward
     
-    reu(90)
+    ir.reu(90)
+  ir.initall()
     
-def sandeeep_motion()
-  initall()
+def sandeeep_motion():
+  ir.initall()
   
-  lsu(45) #down
-  rsu(45) #up
-  reu(45) #inward
-  sleep(in sec)
-  reu(90)
-  rsu(135) #down
+  ir.lsu(45) #down
+  ir.rsu(45) #up
+  ir.reu(45) #inward
+  time.sleep(1)
+  ir.reu(90)
+  ir.rsu(135) #down
+  ir.initall()
   
   
-def surya_motion()
-  initall()
+def surya_motion():
+  ir.initall()
   
-  for x in range(0,3)
-    hd(75) #down
-    leu(135) #inward
-    reu(45) #inward
+  for x in range(0,3):
+    ir.hd(75) #down
+    ir.leu(135) #inward
+    ir.reu(45) #inward
   
-    sleep(in ms)
+    time.sleep(0.5)
   
-    reu(90)
-    leu(90)
-    hd(90) 
+    ir.reu(90)
+    ir.leu(90)
+    ir.hd(90) 
+  ir.initall()
     
 
-def unknown_person_motion()
-  initall()
+def unknown_person_motion():
+  ir.initall()
   
-  rsu(135) #down
-  lsu(45) #down
+  ir.rsu(135) #down
+  ir.lsu(45) #down
   
-  rer(135) #inward
-  ler(45) #inward
+  ir.rer(135) #inward
+  ir.ler(45) #inward
   
-  for x in range(0,3)
-    nk(135)
-    nk(45)
+  for x in range(0,3):
+    ir.nk(135)
+    ir.nk(45)
+  ir.initall()
 
   
   
