@@ -43,7 +43,20 @@ def logger_init():
     
 def on_message(client, userdata, message):
     print("Received a new message: ")
-    print(message.payload)
+    str = message.payload.decode("utf-8")
+    print(str)
+    if str == "Sandeep"
+	mo.sandeep_motion()
+    elif str == "Archit"
+	mo.Archit_motion()
+    elif str == "Mohak"
+	mo.Mohak_motion()
+    elif str == "Shashwat"
+	mo.shashwat_motion()
+    elif str == "Surya"
+	mo.surya_motion()
+    elif str == "Unkown"
+	mo.unknown_motion()
         
     print("--------------\n\n")
 
