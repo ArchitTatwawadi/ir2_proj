@@ -66,10 +66,10 @@ def sandeep_motion():
   ir.lsu(60) #down
   ir.rsu(10) #up
   ir.lss(120)
-  ir.leu(140) #inward
+  ir.leu(120) #inward
   time.sleep(1)
   ir.leu(90)
-  ir.lsu(175) #down
+  ir.lsu(150) #down
   #ir.initall()
   
   
@@ -81,15 +81,15 @@ def surya_motion():
     ir.rsu(120) #inward
     ir.hd(120) 
     ir.lss(120) #inward
-    ir.rss(60) #inward
+    ir.rss(45) #inward
   
     ir.reu(90)
     ir.leu(90)
     time.sleep(0.2)
   
     ir.hd(60) #down
-    ir.reu(165)
-    ir.leu(135)
+    ir.reu(135)
+    ir.leu(115)
   ir.lsu(170) #inward
   ir.rsu(20) #inward
   #ir.initall()
